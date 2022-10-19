@@ -2,55 +2,49 @@
 <settings version="1">
 	<section id="script.LibreTranslate">
 		<category id="general" label="32002" help="32003">
-			<group id="1" label="group_label">
-				<setting id="LibreTranslate_url" type="text" label="32004" help="32005">
-					<level>0</level>
-					<default>https://translate.argosopentech.com/translate</default>
-					<constraints>
-						<allowempty>false</allowempty>
-					</constraints>
-					<control type="edit" format="string">
-						<heading>32006</heading>
-					</control>
-				</setting>
-			</group>
-			<group id="2" label="group_label">
-				<setting id="LibreTranslate_api_key" type="text" label="32007" help="32008">
-					<level>0</level>
-					<default/>
-					<constraints>
-						<allowempty>true</allowempty>
-					</constraints>
-					<control type="edit" format="string">
-						<heading>32009</heading>
-					</control>
-				</setting>
-			</group>
-			<group id="3" label="group_label">
-				<setting id="LibreTranslate_target_lang" type="string" label="32010" help="32011">
-					<level>0</level>
-					<default>en</default>
-					<constraints>
-						<options>
-							<option label="Arabic">ar</option>
-							<option label="Chinese">zh</option>
-							<option label="English">en</option>
-							<option label="French">fr</option>
-							<option label="German">de</option>
-							<option label="Hindi">hi</option>
-							<option label="Irish">ga</option>
-							<option label="Italian">it</option>
-							<option label="Japanese">ja</option>
-							<option label="Korean">ko</option>
-							<option label="Portuguese">pt</option>
-							<option label="Russian">ru</option>							
-							<option label="Spanish">es</option>
-						</options>
-						<allowempty>true</allowempty>
-					</constraints>
-					<control type="spinner" format="string"/>
-				</setting>
-			</group>
+			<setting id="LibreTranslate_url" type="text" label="32004" help="32005">
+				<level>0</level>
+				<default>https://translate.argosopentech.com/translate</default>
+				<constraints>
+					<allowempty>false</allowempty>
+				</constraints>
+				<control type="edit" format="string">
+					<heading>32006</heading>
+				</control>
+			</setting>
+			<setting id="LibreTranslate_api_key" type="text" label="32007" help="32008">
+				<level>0</level>
+				<default/>
+				<constraints>
+					<allowempty>true</allowempty>
+				</constraints>
+				<control type="edit" format="string">
+					<heading>32009</heading>
+				</control>
+			</setting>
+			<setting id="LibreTranslate_target_lang" type="string" label="32010" help="32011">
+				<level>0</level>
+				<default>en</default>
+				<constraints>
+					<options>
+						<option label="Arabic">ar</option>
+						<option label="Chinese">zh</option>
+						<option label="English">en</option>
+						<option label="French">fr</option>
+						<option label="German">de</option>
+						<option label="Hindi">hi</option>
+						<option label="Irish">ga</option>
+						<option label="Italian">it</option>
+						<option label="Japanese">ja</option>
+						<option label="Korean">ko</option>
+						<option label="Portuguese">pt</option>
+						<option label="Russian">ru</option>							
+						<option label="Spanish">es</option>
+					</options>
+					<allowempty>true</allowempty>
+				</constraints>
+				<control type="spinner" format="string"/>
+			</setting>
 		</category>
 	</section>
 </settings>
