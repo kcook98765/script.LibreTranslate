@@ -1,0 +1,66 @@
+# Kodi Media Center language file
+# Addon Name: EPG Fuzzy Match
+# Addon id: script.epg_fuzzy_match
+# Addon Provider: Kyle Cook
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: donotemail@nowhere.com\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kyle Cook\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Settings tabs/categories
+
+msgctxt "#32002"
+msgid "General"
+msgstr ""
+
+msgctxt "#32003"
+msgid ""
+msgstr ""
+
+msgctxt "#32004"
+msgid "API translation url"
+msgstr ""
+
+msgctxt "#32005"
+msgid "Use a free mirror, local server setup or pay for API key at https://libretranslate.com"
+msgstr ""
+
+msgctxt "#32006"
+msgid "text=32006"
+msgstr ""
+
+msgctxt "#32007"
+msgid "API key"
+msgstr ""
+
+msgctxt "#32008"
+msgid "Not needed for free mirror urls"
+msgstr ""
+
+msgctxt "#32009"
+msgid "text=32009"
+msgstr ""
+
+
+msgctxt "#32010"
+msgid "Language to translate to"
+msgstr ""
+
+msgctxt "#32011"
+msgid "Default is English"
+msgstr ""
+
+
+
+
+
+
+
