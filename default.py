@@ -1,4 +1,4 @@
-import xbmc, xbmcgui
+import xbmc, xbmcgui, xbmcaddon
 import sys
 import urllib.request
 import json
