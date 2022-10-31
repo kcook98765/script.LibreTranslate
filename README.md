@@ -1,6 +1,9 @@
 # script.LibreTranslate
 Kodi addon to integrate with LibreTranslate to be able to translate on the fly
 
+Update: V0.0.9 :
+- fix to cache logic to take into account the "translate to" language (so you don't get incorrect translations if you switch the language setting)
+
 Update: V 0.0.8 :
 - Use Simplecache to store lookups for 30 days, to process faster for already translated text
 
