@@ -50,7 +50,7 @@ def main():
     md5_result = hashlib.md5(q.encode())
     hash_hex = md5_result.hexdigest()
     
-    this_cache_id = 'LibreTranslate_' + hash_hex
+    this_cache_id = 'LibreTranslate_' + target + hash_hex
 
     translated_text = _cache.get(this_cache_id)
 

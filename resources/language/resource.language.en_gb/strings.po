@@ -57,10 +57,3 @@ msgstr ""
 msgctxt "#32011"
 msgid "Default is English"
 msgstr ""
-
-
-
-
-
-
-
