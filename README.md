@@ -16,10 +16,10 @@ for example, can call twice in a skin:
 <onload>RunScript(script.LibreTranslate,q=hola,property=a)</onload>
 <onload>RunScript(script.LibreTranslate,q=adiós,property=b)</onload>
 
-q=hola and q=adiós are static text strings, but could use $INFO[] like:
+q=hola and q=adiós are static text strings, but could use $ESCINFO[] (used to properly handle commas, etc in text) like:
 
-<onload>RunScript(script.LibreTranslate,q=$INFO[ListItem.Label]),property=a)</onload>
-<onload>RunScript(script.LibreTranslate,q=$INFO[ListItem.Genre]),property=b)</onload>
+<onload>RunScript(script.LibreTranslate,q='$ESCINFO[ListItem.Label]'),property=a)</onload>
+<onload>RunScript(script.LibreTranslate,q='$ESCINFO[ListItem.Genre]'),property=b)</onload>
 
 After calling those, you can access the results using the "property" identifier sent in the RunScript via property name that always starts with "libreTranslate_" followed by the "property" you sent (a and b in example above):
 
