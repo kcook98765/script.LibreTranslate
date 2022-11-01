@@ -57,3 +57,11 @@ msgstr ""
 msgctxt "#32011"
 msgid "Default is English"
 msgstr ""
+
+msgctxt "#32012"
+msgid "Days to cache"
+msgstr ""
+
+msgctxt "#32013"
+msgid "Default is 30 , set to zero to disable caching"
+msgstr ""

@@ -45,9 +45,11 @@ def main():
     url = addon.getSetting('LibreTranslate_url')
     target = addon.getSetting('LibreTranslate_target_lang')
     api_key = addon.getSetting('LibreTranslate_api_key')
+    cache_days = int(addon.getSetting('LibreTranslate_cache_len'))
 
-
-
+    if cache_days is None:
+        cache_days = 0
+    
     md5_result = hashlib.md5(q.encode())
     hash_hex = md5_result.hexdigest()
     
@@ -56,9 +58,10 @@ def main():
     translated_text = _cache.get(this_cache_id)
 
     if translated_text:
-        _cache.set( this_cache_id, translated_text, expiration=datetime.timedelta(days=30))
-        win.setProperty(setprop, translated_text)
-        return ''
+        _cache.set( this_cache_id, translated_text, expiration=datetime.timedelta(days=cache_days))
+        if cache_days > 0:
+            win.setProperty(setprop, translated_text)
+            return ''
 
     values = {'q': q, 'source': 'auto', 'target': target, 'format': 'text', 'api_key': api_key}
     headers = {
@@ -76,7 +79,7 @@ def main():
             translated_text = re.sub(r"^[\ \'\"]+", "", translated_text)
             translated_text = re.sub(r"[\ \"\']+$", "", translated_text)
             translated_text = re.sub(r"\"\.+$", ".", translated_text)
-            _cache.set( this_cache_id, translated_text, expiration=datetime.timedelta(days=30))
+            _cache.set( this_cache_id, translated_text, expiration=datetime.timedelta(days=cache_days))
     except Exception as e:
         translated_text = str(e)
 
