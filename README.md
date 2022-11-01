@@ -1,6 +1,9 @@
 # script.LibreTranslate
 Kodi addon to integrate with LibreTranslate to be able to translate on the fly
 
+Update: V0.0.10 :
+- escape possible extra single/double quotes due to the way ESCINFO operates, should get translated text without extra leading/trailing quotation marks now
+
 Update: V0.0.9 :
 - fix to cache logic to take into account the "translate to" language (so you don't get incorrect translations if you switch the language setting)
 

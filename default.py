@@ -6,6 +6,7 @@ import simplecache
 import hashlib
 import datetime
 from urllib.parse import parse_qs
+import re
 
 win = xbmcgui.Window(10000)
 win.setProperty("libreTranslate_text", '')
@@ -50,7 +51,7 @@ def main():
     md5_result = hashlib.md5(q.encode())
     hash_hex = md5_result.hexdigest()
     
-    this_cache_id = 'LibreTranslate_' + target + hash_hex
+    this_cache_id = 'script.libreTranslate.' + target + '_' + hash_hex
 
     translated_text = _cache.get(this_cache_id)
 
@@ -72,6 +73,9 @@ def main():
             res = f.read()
             result = json.loads(res)
             translated_text = str(result['translatedText'])
+            translated_text = re.sub(r"^[\ \'\"]+", "", translated_text)
+            translated_text = re.sub(r"[\ \"\']+$", "", translated_text)
+            translated_text = re.sub(r"\"\.+$", ".", translated_text)
             _cache.set( this_cache_id, translated_text, expiration=datetime.timedelta(days=30))
     except Exception as e:
         translated_text = str(e)
